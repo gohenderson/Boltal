@@ -14,92 +14,92 @@ public class RootApiController : ControllerBase
     }
 
     [HttpPost("Create")]
-    public object Create()
+    public async Task<object> CreateAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpPost("Auth")]
-    public object Auth()
+    public async Task<object> AuthAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpPost("AddInvoice")]
-    public object AddInvoice()
+    public async Task<object> AddInvoiceAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpPost("PayInvoice")]
-    public object PayInvoice()
+    public async Task<object> PayInvoiceAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpGet("GetBTC")]
-    public object GetBTC()
+    public async Task<object> GetBTCAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpGet("CheckPayment/{payment_hash}")]
-    public object CheckPayment(string payment_hash)
+    public async Task<object> CheckPaymentAsync(string payment_hash)
     {
-        return new { Message = payment_hash };
+        return await Task.FromResult(new { Message = payment_hash });
     }
 
     [HttpGet("Balance")]
-    public object Balance()
+    public async Task<object> BalanceAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpGet("GetInfo")]
-    public object GetInfo()
+    public async Task<object> GetInfoAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpGet("GetTxs")]
-    public object GetTxs()
+    public async Task<object> GetTxsAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpGet("GetUserInvoices")]
-    public object GetUserInvoices()
+    public async Task<object> GetUserInvoicesAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpGet("GetPending")]
-    public object GetPending()
+    public async Task<object> GetPendingAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpGet("DecodeInvoice")]
-    public object DecodeInvoice()
+    public async Task<object> DecodeInvoiceAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpGet("CheckRouteInvoice")]
-    public object CheckRouteInvoice()
+    public async Task<object> CheckRouteInvoiceAsync()
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(new { Message = "HelloWorld" });
     }
 
     [HttpGet("QueryRoutes/{source}/{dest}/{amt}")]
-    public object QueryRoutes(string source, string dest, string amt)
+    public async Task<object> QueryRoutesAsync(string source, string dest, string amt)
     {
-        return new { source = source, dest = dest, amt = amt };
+        return await Task.FromResult(new { source = source, dest = dest, amt = amt });
     }
 
     [HttpGet("GetChanInfo/{chanid}")]
-    public object GetChanInfo(string chanid)
+    public async Task<object> GetChanInfoAsync(string chanid)
     {
-        return new { Message = "HelloWorld" };
+        return await Task.FromResult(await Task.FromResult(new { Message = "HelloWorld" }));
     }
 }
