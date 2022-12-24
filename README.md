@@ -1,2 +1,2 @@
 # Boltal
-An implementation of the LndHub API in .NET
+An C#.NET Implementation of the LndHub API
