@@ -1,2 +1,2 @@
 # Boltal
-A Lightning Node Management Portal
+An implementation the LndHub API in .NET
